@@ -1,0 +1,8 @@
+trackName	trackPath	duration	rating	nameArtist	genre
+Digital Presentation_48000.wav	resource/songs/Digital Presentation_48000.wav	00:02:47	5	Ramesh; Suresh	Rock
+Soft Piano Music_16000_mono.wav	resource/songs/Soft Piano Music_16000_mono.wav	00:02:16	4	Ram; Shyam	Pop
+Soft Piano Music_16000hz.wav	resource/songs/Soft Piano Music_16000hz.wav	00:02:16	3	Ravi; Kishan	Rock
+wav_21mb.wav	resource/songs/wav_21mb.wav	00:01:56	2	Pooja	Pop
+Wav_25mb.wav	resource/songs/Wav_25mb.wav	00:02:15	1	Deepika	Blues
+Wav_868kb.wav	resource/songs/Wav_868kb.wav	00:00:05	5	Shivam	Classic
+Wav_Files_24mb.wav	resource/songs/Wav_Files_24mb.wav	00:02:12	4	Virat	Jazz
