@@ -180,8 +180,8 @@ public class Implement {
                         }
                         System.out.println("-----------------------------------------------------------------------------------------");
                         System.out.println("1: DO YOU WANT TO PLAY THE ENTIRE PLAYLIST");
-                        System.out.println("2: DO YOU WANT TO PLAY A SONG FROM PLAYLIST");
-                        System.out.println("3: GO BACK TO MAIN MENU");
+                        System.out.println("2: DO YOU WANT TO PLAY A SONG FROM PLAYLIST\n3.DO YOU WANT TO ADD SONGS INTO THIS EXISTING PLAY LIST");
+                        System.out.println("4: GO BACK TO MAIN MENU");
                         int select = scanner.nextInt();
                         switch (select) {
                             case (1):
@@ -197,6 +197,13 @@ public class Implement {
                                 System.out.println("Enter the song id you want to play");
                                 int song_id = scanner.nextInt();
                                 playSongObj.playSong(songsObj.returnPath(song_id));
+                                break;
+                            case 3:
+                                playListObj.addSongsIntoPlayList();
+                                break;
+                            case 4:
+                                Implement.main(args);
+                                break;
                         }
                         break;
 
