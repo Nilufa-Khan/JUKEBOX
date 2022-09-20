@@ -1,6 +1,7 @@
 package data;
 
 
+import main.Implement;
 import util.DbConnection;
 
 import javax.sound.sampled.*;   //clip interface available inside this package
@@ -15,7 +16,7 @@ public class PlaySong {
     List<Songs> songslist;
     int songIndex;
 
-    public void playSong(List<Songs> songslist) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    public void playSong(List<Songs> songslist) throws Exception {
         this.songslist = songslist;
         for (int i = 0; i < songslist.size(); i++) {
             songIndex = i;
@@ -24,7 +25,7 @@ public class PlaySong {
 
     }
 
-    public void playSong(String songPath) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    public void playSong(String songPath) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
         File file = new File(songPath);
@@ -35,7 +36,7 @@ public class PlaySong {
         String userResponse = "";
 
         while (!userResponse.equals("Q")) {
-            System.out.println("P = play, V= Pause, S=Stop, L=Loop, R = Reset, Q = Quit,N = NextSong,O = previousSong");
+            System.out.println("P = play, V= Pause, S=Stop, L=Loop, R = Reset, Q = Quit,N = NextSong,O = previousSong,E = MAIN MENU");
             System.out.print("Enter your choice: ");
 
             userResponse = scanner.next();
@@ -46,7 +47,6 @@ public class PlaySong {
                 case "P": {
                     clip.start();
                     long clip_position = clip.getMicrosecondPosition();
-
                     break;
                 }
                 case "V": {
@@ -69,7 +69,10 @@ public class PlaySong {
                     break;
 
                 case "Q":
+
                     clip.close();
+                    clip.stop();
+
                     break;
                 case "N":
                     songIndex += 1;
@@ -81,6 +84,10 @@ public class PlaySong {
                     songIndex -= 1;
                     clip.close();
                     playSong(songslist.get(songIndex).getTrackPath());
+                    break;
+                case("E"):
+                    String[] arg = new String[0];
+                    Implement.main(arg);
                     break;
 
                 default:

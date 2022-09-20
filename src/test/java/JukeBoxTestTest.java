@@ -36,7 +36,6 @@ class JukeBoxTestTest {
     void displaySongTable() throws SQLException, ClassNotFoundException {
         List<Songs> songsList = jukeBoxOperation.getAllsong();
         assertEquals(19,songsList.size());
-        List<Songs> songsList1 = jukeBoxOperation.getAllsong();
         assertNotEquals(29,songsList.size());
     }
     @Test

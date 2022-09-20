@@ -62,10 +62,24 @@ public class Implement {
 
                                 switch (choice) {
                                     case (1):
-                                        System.out.println("Enter song id which you want to play");
-                                        int songID = scanner.nextInt();
-                                        //calling playsong method from playsong class and passing song path as parameter
-                                        playSongObj.playSong(songsObj.returnPath(songID));
+                                        //updating this line
+                                        System.out.println("1.Want to play a particular song\n2.want to play all songs");
+                                        int inp = scanner.nextInt();
+                                        switch (inp){
+                                            case 1:
+                                                System.out.println("Enter song id which you want to play");
+                                                int songID = scanner.nextInt();
+                                                //calling playsong method from playsong class and passing song path as parameter
+                                                playSongObj.playSong(songsObj.returnPath(songID));
+                                                break;
+                                            case 2:
+                                                System.out.println("Enter song id which you want to play");
+                                                int sonng_ID = scanner.nextInt();
+                                                playSongObj.playSong(jukeBoxOperation.getAllsong());
+                                                main(args);
+                                                break;
+                                        }
+
                                         break;
                                     case (2):
                                         System.out.println("1.For Creating new playlist\n2.Go back to existing playlist");
@@ -172,10 +186,10 @@ public class Implement {
                         playListObj.createAPlayList();
                         break;
                     case (3):
-                        List<Songs> playListEx = playListObj.existingPlaylist();
+                        List<Songs> playListExisting = playListObj.existingPlaylist();
                         System.out.format("%-10s %-30s %-30s %-30s %-30s %-30s \n", "SongID", "SongName", "Duration", "Rating", "Artist", "Genre");
                         System.out.println("--------------------------------------------------------------------------------------------");
-                        for (Songs songs : playListEx) {
+                        for (Songs songs : playListExisting) {
                             System.out.format("%-10s %-30s %-30s %-30s %-30s %-30s \n", songs.getSongId(), songs.getTrackName(), songs.getDuration(), songs.getRating(), songs.getArtist(), songs.getGenre());
                         }
                         System.out.println("-----------------------------------------------------------------------------------------");
@@ -185,13 +199,13 @@ public class Implement {
                         int select = scanner.nextInt();
                         switch (select) {
                             case (1):
-                                playSongObj.playSong(playListEx);
+                                playSongObj.playSong(playListExisting);
                                 Implement.main(args);
                                 break;
                             case (2):
                                 System.out.format("%-10s %-30s %-30s %-30s %-30s %-30s \n", "SongID", "SongName", "Duration", "Rating", "Artist", "Genre");
                                 System.out.println("--------------------------------------------------------------------------------------------");
-                                for (Songs songs : playListEx) {
+                                for (Songs songs : playListExisting) {
                                     System.out.format("%-10s %-30s %-30s %-30s %-30s %-30s \n", songs.getSongId(), songs.getTrackName(), songs.getDuration(), songs.getRating(), songs.getArtist(), songs.getGenre());
                                 }
                                 System.out.println("Enter the song id you want to play");

@@ -41,7 +41,7 @@ public class JukeBoxOperation {
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return list;
     }
