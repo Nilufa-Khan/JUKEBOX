@@ -73,15 +73,14 @@ public class PlaySong {
                     break;
                 case "N":
                     songIndex += 1;
-                   // clip.close();
-                    playSong(songslist.get(songIndex).getTrackPath());
                     clip.close();
+                    playSong(songslist.get(songIndex).getTrackPath());
+
                     break;
                 case "O":
                     songIndex -= 1;
-                    //clip.close();
-                    playSong(songslist.get(songIndex).getTrackPath());
                     clip.close();
+                    playSong(songslist.get(songIndex).getTrackPath());
                     break;
 
                 default:
