@@ -1,19 +1,58 @@
-# JUKEBOX
-Jukebox | Java ,JDBC, MySQL
-Java  Application
+🎧 Console Jukebox: A CLI Music Player 🎧
+A robust, Java-based command-line interface (CLI) music player built for performance and simplicity. Manage your local music library entirely through text commands—perfect for backend enthusiasts.
 
 
+✨ Features
+This project focuses on delivering core music player functionality via a smooth, responsive command-line experience:
+🎹 Full Playback Control: Use simple commands to play, stop, pause, and resume audio tracks.
+⏩ Navigation: Instantly forward or backward through tracks in your playlist.
+🔍 Music Search: Dynamically search your loaded music directory for specific songs by title or artist.
+📂 Playlist Management: Automatically generates a playlist from a specified local directory.
+⚙️ Robust Backend Logic: Built purely in Java, focusing on reliable file handling and audio stream management.
+🚀 Getting Started
+To run this jukebox locally, you'll need the Java Development Kit (JDK) installed on your system.
+Prerequisites
+Java JDK (Version 11+ Recommended)
+Installation
+Clone the repository:
+bash
+git clone github.com
+cd YourRepoName
+Use code with caution.
 
-Jukebox is a desktop music player application. It is a Java application written in Java language.
-Designed a modern JukeBox that allows user to listen to live- streamed music.There are many tracks available on the jukebox, you can also browse through the artists and genre or create a playlist
- 
-Stores user data and playlist using a MySQL database.
+Compile the Java source files:
+bash
+javac Main.java 
+# (or use a build tool like Maven/Gradle if implemented)
+Use code with caution.
 
-It uses many java libraries. It was developed to give ideas to developers.
+Run the application:
+bash
+java Main
+Use code with caution.
 
-If you like this Repo, Please click the ⭐
-
-
-
-👨‍🚀 Show your support
-Give a ⭐️ if this project helped you!
+🕹️ Usage
+Once the application starts, you will interact with it using simple commands:
+Command	Description	Example
+play	Starts playing the current track	play
+pause	Pauses the currently playing track	pause
+resume	Resumes a paused track	resume
+stop	Stops playback entirely	stop
+next	Skips to the next song in the playlist	next
+prev	Goes back to the previous song	prev
+search	Finds a song in the library	search Bohemian Rhapsody
+exit	Closes the application	exit
+🔧 Technical Stack
+Language: Java
+Audio Handling: Java Sound API (javax.sound.sampled)
+Interface: Command Line Interface (CLI)
+💡 Learnings & Development Focus
+This project was a deep dive into several key backend engineering concepts:
+File I/O & Audio Streams: Mastering how Java interacts with the local file system and manages continuous audio data streams efficiently.
+Concurrency: Implementing multithreading to ensure the user input listener remains active without interrupting the ongoing audio playback process.
+OOP Principles: Applying clean Object-Oriented Programming patterns to create a modular and maintainable codebase.
+🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+📄 License
+This project is licensed under the MIT License.
+Made with ❤️ and Code | © 2025 Nilufa Khan
